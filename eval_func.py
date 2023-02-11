@@ -9,7 +9,7 @@ from tqdm import tqdm
 from itertools import combinations, permutations
 from sklearn.neighbors import NearestNeighbors
 
-from MatchEval.Meshes import get_dist, get_all_p2p_vts
+# from MatchEval.Meshes import get_dist, get_all_p2p_vts
 from pathlib import Path
 from utils.my_utils import safe_make_dirs, flatten_list_of_list
 from utils import local_config
@@ -110,16 +110,17 @@ def match_scape_r(mesh_dir, method_name, all_recon_mesh,
     print("Result for %s is : \n" % method_name)
     return p2p_dict
 
-
+# NOt using this dataset
 def run_eval_vts(pred_map, geod_mat_dir, mesh_dir, vts_dir, test_pairs,
                  mesh_ext='.ply'):
-    vts_dict = get_all_p2p_vts(vts_dir, prefix='', test_pairs=test_pairs)
-    geod = get_dist(test_pairs, vts_dict, pred_map, geod_mat_dir, mesh_dir=mesh_dir,
-                    normalise=True, strict=True,
-                    is_matlab=False, mesh_ext=mesh_ext)
-    return geod
+    # vts_dict = get_all_p2p_vts(vts_dir, prefix='', test_pairs=test_pairs)
+    # geod = get_dist(test_pairs, vts_dict, pred_map, geod_mat_dir, mesh_dir=mesh_dir,
+    #                 normalise=True, strict=True,
+    #                 is_matlab=False, mesh_ext=mesh_ext)
+    # return  0 
+    return 
 
-
+#Should never run
 def eval_scape_r(pred_map, mesh_dir):
     geod_dir = local_config.SCAPE_RM_GEOD_DIR
     test_pairs = [i.split('_') for i in pred_map.keys()]

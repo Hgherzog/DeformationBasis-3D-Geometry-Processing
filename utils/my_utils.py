@@ -10,7 +10,7 @@ from scipy.spatial import cKDTree as KDTree
 from sklearn.utils import shuffle
 from tqdm import tqdm
 
-from utils import preproc_utils
+# from utils import preproc_utils
 
 
 def get_chamfer_loss():
@@ -20,7 +20,7 @@ def get_chamfer_loss():
     import sys
     from .local_config import CD_COMPILED_PATH 
     sys.path.append(CD_COMPILED_PATH)
-    import dist_chamfer as ext
+    import dist_chamfer_3D as ext
     distChamfer = ext.chamferDist()
     return distChamfer
 

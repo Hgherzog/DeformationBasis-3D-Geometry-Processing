@@ -12,6 +12,8 @@ from utils.my_utils import convert_to_batch, bn3Tob3n, fourier_encode
 Pointnet like convolutional encoder with Batch norm and relu '''
 
 
+
+
 # Decoder
 
 '''
